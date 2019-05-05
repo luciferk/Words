@@ -23,7 +23,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
-    [NSApp setMainMenu:commonMenu];
+//    [NSApp setMainMenu:commonMenu];
     
     statusBarItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
     NSImage *img = [NSImage imageNamed:@"StatusBarButtonImage"];
@@ -55,12 +55,11 @@
     if (statusPop.isShown) {
         [self monitorStop];
         [statusPop performClose:sender];
-        
+
     }
     else{
         [self monitorStart];
         [statusPop showRelativeToRect:statusBarItem.button.bounds ofView:statusBarItem.button preferredEdge:NSRectEdgeMinY];
-       
     }
 }
 
